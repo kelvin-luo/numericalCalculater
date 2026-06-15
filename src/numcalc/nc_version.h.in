@@ -1,0 +1,14 @@
+#pragma once
+
+// Auto-generated from nc_version.h.in by CMake. Do not edit by hand.
+
+#define NC_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define NC_VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define NC_VERSION_PATCH @PROJECT_VERSION_PATCH@
+#define NC_VERSION_STRING "@PROJECT_VERSION@"
+#define NC_PROJECT_NAME "@PROJECT_NAME@"
+#define NC_PROJECT_DESCRIPTION "@PROJECT_DESCRIPTION@"
+
+#define NC_COPYRIGHT "copyright@1999-2026 aesthetic company limited. All rights reserved."
+#define NC_CONTACT_EMAIL "342247588@qq.com"
+#define NC_CONTACT_WECHAT "kelvinluo79"

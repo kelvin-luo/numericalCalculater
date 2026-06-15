@@ -1,0 +1,61 @@
+// numericalCalculater resource script
+#include "resource.h"
+#include "afxres.h"
+
+#pragma code_page(65001)
+
+/////////////////////////////////////////////////////////////////////////////
+// Icon
+IDR_MAINFRAME           ICON                    "res\\app.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+// Main dialog
+IDD_MAIN_DIALOG DIALOGEX 0, 0, 470, 320
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Numerical Calculator"
+FONT 9, "Segoe UI", 400, 0, 0x1
+BEGIN
+    LTEXT           "Numerical Calculator",IDC_STATIC_TITLE,10,6,300,18
+
+    GROUPBOX        "Methods",IDC_STATIC_GROUP_METHODS,8,28,120,202
+    PUSHBUTTON      "0   Image -> YUV",IDC_BTN_YUV,14,44,108,18
+    PUSHBUTTON      "1   Matrix Ops",IDC_BTN_MATRIX,14,66,108,18
+    PUSHBUTTON      "2   Probability",IDC_BTN_PROB,14,88,108,18
+    PUSHBUTTON      "3   Statistics",IDC_BTN_STAT,14,110,108,18
+    PUSHBUTTON      "4   Logistic Reg.",IDC_BTN_LOGISTIC,14,132,108,18
+    PUSHBUTTON      "5   k-NN",IDC_BTN_KNN,14,154,108,18
+    PUSHBUTTON      "6   ANN (MLP)",IDC_BTN_ANN,14,176,108,18
+    PUSHBUTTON      "7   CNN",IDC_BTN_CNN,14,198,108,18
+
+    GROUPBOX        "Input / Output",IDC_STATIC_GROUP_OUTPUT,8,234,120,80
+    PUSHBUTTON      "Open Image...",IDC_BTN_OPENIMG,14,248,108,18
+    PUSHBUTTON      "Save Chart...",IDC_BTN_SAVEPLOT,14,270,108,18
+    PUSHBUTTON      "About...",IDC_BTN_ABOUT,14,292,108,18
+
+    LTEXT           "Input:",IDC_STATIC,134,30,24,10
+    EDITTEXT        IDC_EDIT_PATH,160,28,302,13,ES_AUTOHSCROLL
+    CTEXT           "",IDC_PIC,134,46,328,158,SS_SUNKEN | SS_NOTIFY
+    EDITTEXT        IDC_EDIT_REPORT,134,208,328,104,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+END
+
+/////////////////////////////////////////////////////////////////////////////
+// About dialog
+IDD_ABOUTBOX DIALOGEX 0, 0, 250, 150
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 9, "Segoe UI", 400, 0, 0x1
+BEGIN
+    LTEXT           "Numerical Calculator",IDC_ABOUT_TITLE,12,12,226,16
+    LTEXT           "Version",IDC_ABOUT_VERSION,12,32,226,12
+    LTEXT           "copyright",IDC_ABOUT_COPYRIGHT,12,54,226,24
+    LTEXT           "Email:",IDC_ABOUT_EMAIL,12,84,226,12
+    LTEXT           "WeChat:",IDC_ABOUT_WECHAT,12,100,226,12
+    DEFPUSHBUTTON   "OK",IDOK,100,124,50,16
+END
+
+/////////////////////////////////////////////////////////////////////////////
+// String table
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "About Numerical Calculator..."
+END
