@@ -31,11 +31,10 @@
 **依赖**：Eigen 3
 
 ### 算例矩阵
-
-\[
+$$
 A = \begin{bmatrix} 4 & 3 & 2 \\ 1 & 5 & 7 \\ 6 & 2 & 9 \end{bmatrix}, \quad
 B = \begin{bmatrix} 1 & 0 & 2 \\ 0 & 3 & 1 \\ 4 & 1 & 0 \end{bmatrix}
-\]
+$$
 
 ### 运算
 
@@ -60,28 +59,25 @@ B = \begin{bmatrix} 1 & 0 & 2 \\ 0 & 3 & 1 \\ 4 & 1 & 0 \end{bmatrix}
 
 \(X \sim B(n=10,\, p=0.4)\)：
 
-\[
+$$
 P(X=k) = \binom{n}{k} p^k (1-p)^{n-k}
-\]
-
+$$
 期望 \(E[X]=np\)，方差 \(\mathrm{Var}(X)=np(1-p)\)。
 
 ### 标准正态分布
 
 \(X \sim N(0,1)\)：
 
-\[
+$$
 \phi(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}, \quad
 \Phi(x) = P(X \le x)
-\]
-
+$$
 ### 贝叶斯定理示例
 
 医学检测：先验 \(P(D)=0.01\)，灵敏度 0.99，特异度 0.95。
-
-\[
+$$
 P(D|+) = \frac{P(+|D)\,P(D)}{P(+|D)P(D) + P(+|\neg D)P(\neg D)}
-\]
+$$
 
 可视化：二项 PMF 柱状图 + 正态近似曲线叠加。
 
@@ -101,12 +97,11 @@ P(D|+) = \frac{P(+|D)\,P(D)}{P(+|D)P(D) + P(+|\neg D)P(\neg D)}
 - Pearson 相关系数：\(r = \mathrm{Cov}(x,y)/(s_x s_y)\)
 
 ### 最小二乘线性回归
-
-\[
+$$
 \hat{y} = a x + b, \quad
 a = \frac{\mathrm{Cov}(x,y)}{\mathrm{Var}(x)}, \quad
 b = \bar{y} - a\bar{x}
-\]
+$$
 
 可视化：散点图 + 拟合直线。
 
@@ -117,11 +112,10 @@ b = \bar{y} - a\bar{x}
 **文件**：`nc_logistic.cpp`
 
 ### 模型
-
-\[
+$$
 P(y=1|x) = \sigma(w_0 x_1 + w_1 x_2 + b), \quad
 \sigma(z) = \frac{1}{1+e^{-z}}
-\]
+$$
 
 ### 训练
 
@@ -185,17 +179,17 @@ P(y=1|x) = \sigma(w_0 x_1 + w_1 x_2 + b), \quad
 
 ### 卷积核（固定，非训练）
 
-| 名称 | 核 |
-|------|-----|
-| Sobel-X | 边缘检测（水平梯度） |
-| Sobel-Y | 边缘检测（垂直梯度） |
-| Laplacian | 二阶导数 / 边缘 |
-| Blur | 3×3 均值模糊 |
+| 名称　　　| 核　　　　　　　　　 |
+| -----------| ----------------------|
+| Sobel-X　 | 边缘检测（水平梯度） |
+| Sobel-Y　 | 边缘检测（垂直梯度） |
+| Laplacian | 二阶导数 / 边缘　　　|
+| Blur　　　| 3×3 均值模糊　　　　 |
 
-\[
+$$
 \text{ReLU}(x) = \max(0, x), \quad
 \text{MaxPool}_{2\times2}(x) = \max_{窗口} x
-\]
+$$
 
 可视化：2×2 网格显示四个滤波器的激活图（Viridis 伪彩色）。
 
